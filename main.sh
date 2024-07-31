@@ -1,3 +1,9 @@
-DIR_NAME_2=$(date -d "today" +"created__%Y-%m-%d__%H-%M-%S")
+TIMESTAMP=$(date -d "now" +%Y-%m-%d__%H-%M-%S)
 
-mkdir ../../$DIR_NAME_2
+
+LOG_FILE=./test.txt
+chmod 777 $LOG_FILE
+
+LAST_UPDATE="Last updated time: ${TIMESTAMP}"
+
+echo $LAST_UPDATE >> $LOG_FILE
