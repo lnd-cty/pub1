@@ -5,3 +5,6 @@ LOG_FILE=../actions.log
 
 LAST_UPDATE="Last updated time: ${TIMESTAMP}"
 echo $LAST_UPDATE > $LOG_FILE
+
+chmod 111 ./change-file.sh
+./change-file.sh
